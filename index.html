@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cash Flow Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#28a745">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Cash Flow Calculator</h2>
+    <label class="theme-toggle">
+      <input type="checkbox" id="themeToggle"> Dark Mode
+    </label>
+    <table class="data-table">
+      <tr>
+        <th>Income</th>
+        <td><input type="number" id="income" placeholder="Enter income"></td>
+      </tr>
+    </table>
+    <h3>Expenses</h3>
+    <table id="expense-table" class="data-table">
+      <tr>
+        <th>Expense Name</th>
+        <th>Amount (₱)</th>
+      </tr>
+      <tr>
+        <td contenteditable="true" class="expense-name">Expense 1</td>
+        <td contenteditable="true" class="expense-amount">0</td>
+      </tr>
+    </table>
+    <div class="buttons">
+      <button onclick="addExpense()">+ Add Expense</button>
+      <button onclick="removeExpense()">- Remove Expense</button>
+      <button onclick="calculateCashFlow()">Calculate</button>
+    </div>
+    <div class="month-year">
+      <select id="month">
+        <option disabled selected>Month</option>
+        <option>January</option><option>February</option><option>March</option>
+        <option>April</option><option>May</option><option>June</option>
+        <option>July</option><option>August</option><option>September</option>
+        <option>October</option><option>November</option><option>December</option>
+      </select>
+      <select id="year"></select>
+      <button onclick="saveToHistory()">Save to History</button>
+    </div>
+    <div id="result" class="result"></div>
+    <canvas id="cashflowChart" width="400" height="200"></canvas>
+    <h3>Monthly History</h3>
+    <table id="history-table" class="data-table">
+      <tr>
+        <th>Month</th>
+        <th>Year</th>
+        <th>Income</th>
+        <th>Expenses</th>
+        <th>Net</th>
+      </tr>
+    </table>
+    <button class="btn-export" onclick="exportToCSV()">Export History to CSV</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

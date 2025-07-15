@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  transition: background 0.3s, color 0.3s;
+}
+.container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 100%;
+}
+h2, h3 {
+  text-align: center;
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+.data-table th, .data-table td {
+  border: 1px solid #ccc;
+  padding: 0.6rem;
+  text-align: left;
+}
+input[type="number"] {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+[contenteditable="true"] {
+  background-color: #f9f9f9;
+  padding: 0.4rem;
+  border-radius: 4px;
+  outline: none;
+  min-width: 60px;
+}
+[contenteditable="true"]:focus {
+  background-color: #e8f0fe;
+  outline: 2px dashed #007bff;
+}
+.buttons, .month-year {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+button {
+  flex: 1;
+  padding: 0.6rem;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+button:nth-child(1) { background-color: #007bff; }
+button:nth-child(2) { background-color: #dc3545; }
+button:nth-child(3), .month-year button { background-color: #28a745; }
+.btn-export {
+  width: 100%;
+  background: #6c757d;
+  color: white;
+  padding: 0.6rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.result {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 1rem;
+}
+.theme-toggle {
+  text-align: right;
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+}
+.month-year select {
+  flex: 1;
+  padding: 0.4rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+body.dark {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+body.dark .container {
+  background-color: #2a2a2a;
+}
+body.dark .data-table th,
+body.dark .data-table td {
+  border-color: #555;
+}
+body.dark input,
+body.dark [contenteditable="true"],
+body.dark select {
+  background-color: #333;
+  color: #fff;
+  border-color: #555;
+}
+body.dark button:nth-child(1) { background-color: #3399ff; }
+body.dark button:nth-child(2) { background-color: #e55353; }
+body.dark button:nth-child(3) { bac
